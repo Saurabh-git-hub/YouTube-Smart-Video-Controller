@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube-Smart-Video-Controller",
+  "version": "2.0",
+  "description": "Enhance YouTube with Auto Pause/Play, Smart Resume , Distraction-Free & Focus Timer",
+  "permissions": ["storage", "scripting", "tabs"],
+  "host_permissions": ["*://www.youtube.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "icons/extension-menu-icon-48.png"   
+    }
+  },
+"icons": {   
+  "48": "icons/extension-menu-icon-48.png"  
+},
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
+
