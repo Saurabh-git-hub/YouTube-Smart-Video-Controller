@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Smart Video Controller</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="popup-card">
+    <h2 class="title"> YouTube Smart Video Controller</h2>
+    <p class="subtitle">Customize your YouTube experience</p>
+
+    <label class="option-card">
+      <div class="left">
+        <div class="icon-wrap">
+          <!-- SVG: pause/play -->
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+        </div>
+        <div class="meta">
+          <div class="label">Auto Pause/Play</div>
+          <div class="desc">Pause when tab hidden, resume when back</div>
+        </div>
+      </div>
+      <input type="checkbox" id="autoPause" />
+    </label>
+
+    <label class="option-card">
+      <div class="left">
+        <div class="icon-wrap">
+          <!-- SVG: resume/bookmark -->
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M6 3v18l6-3 6 3V3z"/></svg>
+        </div>
+        <div class="meta">
+          <div class="label">Smart Resume</div>
+          <div class="desc">Remember position and resume later</div>
+        </div>
+      </div>
+      <input type="checkbox" id="smartResume" />
+    </label>
+
+    <label class="option-card">
+      <div class="left">
+        <div class="icon-wrap">
+          <!-- SVG: focus -->
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg>
+        </div>
+        <div class="meta">
+          <div class="label">Distraction-Free</div>
+          <div class="desc">Hide comments & recommendations</div>
+        </div>
+      </div>
+      <input type="checkbox" id="focusMode" />
+    </label>
+
+    <label class="option-card">
+      <div class="left">
+        <div class="icon-wrap">
+          <!-- SVG: timer -->
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div class="meta">
+          <div class="label">Focus Timer</div>
+          <div class="desc">Auto pause after minutes</div>
+        </div>
+      </div>
+      <input type="number" id="focusTimer" min="1" placeholder="min" />
+    </label>
+
+    <button id="saveBtn" class="save-btn">
+      <span class="save-icon" aria-hidden="true">
+        <!-- save icon -->
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+      </span>
+      <span class="save-text">Save Settings</span>
+    </button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
